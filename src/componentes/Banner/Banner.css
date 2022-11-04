@@ -1,10 +1,8 @@
-/*Classe banner */
-.banner{
+.banner {
     background-color: #6278F7;
     text-align: center;
-
 }
-/*Responsividade da imagem ao aumentar e diminuir a tela*/
-.banner img{
+
+.banner img {
     max-width: 100%;
 }

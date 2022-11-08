@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './CampoTexto.css'
 /* props é o nome dado geralmente a uma propriedade, mas pode ser qualquer nome  */
 const CampoTexto = (props) => {
@@ -22,8 +21,6 @@ do ciclo de vida do objeto*/
 const aoDigitado = (evento)=>{
    props.aoAlterado(evento.target.value)
 }
-
-
 
 return(
     <div className="campo-texto">

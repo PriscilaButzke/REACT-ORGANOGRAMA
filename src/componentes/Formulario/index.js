@@ -6,13 +6,7 @@ import './Formulario.css'
 
 const Formulario = (props) => {
 
-    const times = [
-        'Desenvolvimento',
-        'QA Testes e qualidade de software',
-        'Designer',
-        'Pessoas e cultura',
-    ]
-
+  
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoColaboradorCadastrado ({
@@ -21,6 +15,10 @@ const Formulario = (props) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     const[nome,setNome] = useState('');
@@ -42,8 +40,13 @@ const Formulario = (props) => {
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" 
                 valor={imagem} aoAlterado = {valor => setImagem(valor)}/>
                 
-                <ListaSuspensa obrigatorio={true} label="Time" itens={times}
-                valor={time} aoAlterado = {valor => setTime(valor)}/>
+                <ListaSuspensa 
+                obrigatorio={true} 
+                label="Time" 
+                itens={props.times}
+                valor={time} 
+                aoAlterado = {valor => setTime(valor)}
+                />
                 <Botao>
                     Criar Card
                 </Botao>
